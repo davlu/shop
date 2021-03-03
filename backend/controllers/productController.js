@@ -2,7 +2,7 @@ import Product from "../models/productModel.js";
 import asyncHandler from "express-async-handler"; //so u dont have to try catch every single fking time
 
 const getProducts = asyncHandler(async (req, res) => {
-  const pageSize = 10;
+  const pageSize = 6;
   const page = Number(req.query.pageNumber) || 1; //will have ?pageNumber=3 in URL
   //.query gets the ?blah part in url
   const keyword = req.query.keyword
